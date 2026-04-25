@@ -234,6 +234,14 @@ Used for template instantiation and other multi-entity operations.
 
 ---
 
+### Content Blocks (`content_blocks.go`)
+
+| Method | Path | Description |
+|--------|------|-------------|
+| `POST` | `/api/v2/content-blocks/{blockID}/moveto/{where}/{dstBlockID}` | Move a content block before/after another block in the parent card |
+
+---
+
 ### Channels (`channels.go`)
 
 | Method | Path | Description |

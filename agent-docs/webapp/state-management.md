@@ -308,7 +308,7 @@ interface AttachmentsState {
 |--------|-------------|
 | `updateAttachments(attachments)` | Upsert attachment blocks |
 | `deleteAttachments(ids)` | Remove attachment blocks |
-| `updateUploadPrecent({ blockId, percent })` | Track upload progress (0–100) |
+| `updateUploadPercent({ blockId, percent })` | Track upload progress (0–100) |
 
 ### Selectors
 

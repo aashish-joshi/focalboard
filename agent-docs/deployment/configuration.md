@@ -139,7 +139,7 @@ user:password@tcp(localhost:3306)/focalboard
 | `authMode` | string | `native` | Auth mode: `native` or `mattermost` |
 | `secret` | string | `""` | Secret for JWT token signing |
 | `session_expire_time` | int64 | `2592000` | Session expiry in seconds (default: 30 days) |
-| `session_refresh_time` | int64 | `300` | Session refresh interval in seconds (default: 5 minutes) |
+| `session_refresh_time` | int64 | `18000` | Session refresh interval in seconds (default: 5 hours). Session UpdateAt is renewed this often to prevent premature expiry. |
 | `passwordMinLength` | int | `0` | Minimum password length (0 = no minimum) |
 | `passwordMaxLength` | int | `0` | Maximum password length (0 = no maximum) |
 
@@ -159,8 +159,8 @@ user:password@tcp(localhost:3306)/focalboard
 
 | Field | Type | Default | Description |
 |-------|------|---------|-------------|
-| `notifyFreqCardSeconds` | float64 | `120` | Delay (seconds) before sending card change notification |
-| `notifyFreqBoardSeconds` | float64 | `86400` | Delay (seconds) before sending board change notification |
+| `notifyFreqCardSeconds` | int | `120` | Delay (seconds) before sending card change notification |
+| `notifyFreqBoardSeconds` | int | `86400` | Delay (seconds) before sending board change notification |
 | `webhook_update` | []string | `[]` | List of webhook URLs to notify on block changes |
 
 ---

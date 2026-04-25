@@ -93,8 +93,8 @@ type Configuration struct {
     AuditCfgJSON string `json:"audit_cfg_json"`
 
     // Notifications
-    NotifyFreqCardSeconds  float64 `json:"notify_freq_card_seconds"`
-    NotifyFreqBoardSeconds float64 `json:"notify_freq_board_seconds"`
+    NotifyFreqCardSeconds  int `json:"notify_freq_card_seconds"`
+    NotifyFreqBoardSeconds int `json:"notify_freq_board_seconds"`
 
     // UI
     TeammateNameDisplay string `json:"teammate_name_display"`
@@ -128,7 +128,7 @@ type Configuration struct {
 | `FilesPath` | `./files` |
 | `FilesDriver` | `local` |
 | `SessionExpireTime` | `2592000` (30 days) |
-| `SessionRefreshTime` | `300` (5 minutes) |
+| `SessionRefreshTime` | `18000` (5 hours) |
 
 ### Loading
 

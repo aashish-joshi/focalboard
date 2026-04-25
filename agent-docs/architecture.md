@@ -133,7 +133,7 @@ App Layer (app/cards.go → CreateCard)
   │
 Async Callback
   ├─ wsAdapter.BroadcastBlockChange(teamID, block)
-  │   └─ Push ACTION_UPDATE_BLOCK to all team WebSocket subscribers
+  │   └─ Push UPDATE_BLOCK to all team WebSocket subscribers
   ├─ webhook.NotifyUpdate(block)
   │   └─ HTTP POST block JSON to configured webhook URLs
   └─ notifications.BlockChanged(event)
@@ -164,7 +164,7 @@ Redux store updated:
   │
 WebSocket subscribes:
   └─ wsclient.subscribeToTeam(teamId)
-       └─ sends ACTION_SUBSCRIBE_TEAM over WS
+       └─ sends SUBSCRIBE_TEAM over WS
   │
 Render:
   └─ workspace.tsx → centerPanel.tsx
